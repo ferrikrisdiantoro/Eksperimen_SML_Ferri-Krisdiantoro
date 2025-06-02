@@ -1,4 +1,4 @@
-# Eksperimen_SML_Nama-siswa
+# Eksperimen_SML_Ferri-Krisdiantoro
 
 Repositori ini dibuat untuk memenuhi **Kriteria 1** dari submission kelas **Machine Learning for Software Engineering (MSML)**, yang berfokus pada eksperimen awal terhadap dataset pelatihan.
 
