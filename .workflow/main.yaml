@@ -1,0 +1,32 @@
+name: Preprocess Dataset
+
+on:
+  push:
+    paths:
+      - 'preprocessing/automate_Ferri-Krisdiantoro.py'
+      - 'preprocessing/Eksperimen_Ferri-Krisdiantoro.ipynb'
+      - 'preprocessing/obesity-classification_preprocessing.csv'
+      - 'obesity-classification_raw.csv'
+      - 'requirements.txt'
+  workflow_dispatch:
+
+jobs: 
+  preprocess:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Jalankan preprocessing
+        run: |
+          python automate_Ferri-Krisdiantoro.py
